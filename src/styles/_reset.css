@@ -1,0 +1,10 @@
+/* CSS Reset/Normalize Rules */
+/* Example: Simple Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Add more comprehensive reset/normalize rules as needed */
+/* Consider using established resets like normalize.css */

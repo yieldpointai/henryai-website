@@ -1,0 +1,9 @@
+/* Main global stylesheet */
+/* Import all other global style partials */
+
+@import url('./_reset.css');
+@import url('./_variables.css');
+@import url('./_base.css');
+/* @import url('./_utilities.css'); /* Uncomment if you add utilities */
+
+/* Any other global styles can be added directly here if needed */

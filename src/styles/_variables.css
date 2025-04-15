@@ -1,0 +1,13 @@
+:root {
+  /* Define global CSS variables here */
+  --primary-color: #42b883; /* Example Vue Green */
+  --secondary-color: #646cff; /* Example Vite Blue */
+  --text-color: #2c3e50;
+  --background-color: #ffffff;
+
+  --font-family-base: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-size-base: 16px;
+  --line-height-base: 1.5;
+
+  /* Spacing units, etc. */
+}

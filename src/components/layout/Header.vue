@@ -1,37 +1,50 @@
 <script setup>
 import companyLogo from '@/assets/logos/company-logo.png';
 import { COMPANY_NAME } from '@/config.js';
-// Header logic
+import {
+  NavigationMenu,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  navigationMenuTriggerStyle, // Import this for link styling
+} from '@/components/ui/navigation-menu'
 </script>
 
 <template>
-  <header>
-    <img :src="companyLogo" :alt="COMPANY_NAME + ' Logo'" class="logo"> <!-- Use the imported logo -->
-    <nav>
-      <ul>
-        
-      </ul>
-    </nav>
+  <header class="border-b">
+    <div class="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
+      <!-- Logo -->
+      <a href="/" class="flex items-center">
+        <img :src="companyLogo" :alt="COMPANY_NAME + ' Logo'" class="h-8 w-auto mr-3"> <!-- Adjusted size -->
+        <span class="font-semibold text-lg">{{ COMPANY_NAME }}</span> <!-- Optional: Add company name next to logo -->
+      </a>
+
+      <!-- Navigation Menu -->
+      <NavigationMenu>
+        <NavigationMenuList>
+          <NavigationMenuItem>
+            <NavigationMenuLink href="#" :class="navigationMenuTriggerStyle()">
+              Home
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <NavigationMenuLink href="#" :class="navigationMenuTriggerStyle()">
+              About
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <NavigationMenuLink href="#" :class="navigationMenuTriggerStyle()">
+              Contact
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+          <!-- Add more items or dropdowns as needed -->
+        </NavigationMenuList>
+      </NavigationMenu>
+    </div>
   </header>
 </template>
 
 <style scoped>
-header {
-  background-color: #f8f8f8;
-  padding: 1rem;
-  border-bottom: 1px solid #eee;
-  display: flex; /* Added for layout */
-  align-items: center; /* Added for layout */
-}
-.logo {
-  height: 40px; /* Example: Adjust size as needed */
-  margin-right: 1rem; /* Add some space between logo and nav */
-}
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 1rem;
-}
+/* Remove previous styles, rely on Tailwind and shadcn components */
+/* Add any component-specific overrides here if necessary */
 </style>
